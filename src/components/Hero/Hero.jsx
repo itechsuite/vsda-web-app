@@ -2,6 +2,9 @@ import React from "react";
 import { CarouselButtons } from "./CarouselButtons";
 
 const Hero = () => {
+
+  //something else
+
   return (
     <div>
       <div className="carousel w-full relative min-h-[300px]">
@@ -9,6 +12,8 @@ const Hero = () => {
 
         <div
           id="slide1"
+
+
           className="carousel-item relative w-full  bg-[url('../../assets/images/main1.jpeg')]"
         >
           {/* <img
