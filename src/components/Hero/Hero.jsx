@@ -14,7 +14,7 @@ const Hero = () => {
           id="slide1"
 
 
-          className="carousel-item relative w-full  bg-[url('../../assets/images/main1.jpeg')]"
+          className="carousel-item relative w-full"
         >
           {/* <img
             src={require("../../assets/images/main1.jpeg")}
@@ -30,10 +30,10 @@ const Hero = () => {
           </div>
         </div>
         <div id="slide2" className="carousel-item relative w-full">
-          <img
+          {/* <img
             src={require("../../assets/images/main1.jpeg")}
             className="w-full"
-          />
+          /> */}
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
               ❮
