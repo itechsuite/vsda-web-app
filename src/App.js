@@ -3,6 +3,8 @@ import "./App.css";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero/Hero";
+import Home from "./pages/Home";
 
 function App() {
   useEffect(() => {
@@ -14,12 +16,16 @@ function App() {
       element: (
         <div>
           <Navbar />
-          hello
+
           <Outlet />
         </div>
       ),
 
       children: [
+        {
+          path: "",
+          element: <Home />,
+        },
         {
           path: "/test",
           element: <div> test field</div>,
