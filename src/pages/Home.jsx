@@ -1,21 +1,27 @@
 import React from "react";
 import Hero from "../components/Hero/Hero";
+import Banner from "../components/Banner";
+import FeaturedCourses from "../components/FeaturedCourses";
+import KeyNotes from "../components/KeyNotes";
+import Partners from "../components/Partners";
+import CoursesList from "../components/CoursesList";
 
 const Home = () => {
-  return (
-    <div>
-      {/* <p>carousel</p>
-       */}
-      <Hero />
-      <p>key note</p>
-      <p>Show courses</p>
-      <p>another banner</p>
-      <p>Popular courses</p>
+    return (
+        <div>
+            {/* <Hero /> */}
+            <Banner />
+            <CoursesList />
 
-      <p>Partners</p>
-      <footer> footer</footer>
-    </div>
-  );
+            <KeyNotes />
+            {/* <p>Show courses</p> */}
+            <Banner />
+
+            <FeaturedCourses />
+
+            <Partners />
+        </div>
+    );
 };
 
 export default Home;

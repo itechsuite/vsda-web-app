@@ -1,44 +1,65 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero/Hero";
 import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import PublicRoutes from "./routes/PublicRoutes";
+import About from "./pages/About";
+import Gallery from "./pages/Gallery";
+import ErrorPage from "./pages/Error-page";
+import MarketPlace from "./pages/MarketPlace";
+import TechnicalTraining from "./pages/TechnicalTraining";
+import Tutorial from "./pages/Tutorials";
+import Contact from "./pages/Contact";
 
 function App() {
-  useEffect(() => {
-    // console.log("hel");
-  }, []);
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
+    useEffect(() => {
+        // console.log("hel");
+    }, []);
+    // const router = createBrowserRouter([
+    //   {
+    //     path: "/",
+    //     element: (
+    //       <div>
+    //         <Navbar />
+
+    //         <Outlet />
+    //       </div>
+    //     ),
+
+    //     children: [
+    //       {
+    //         path: "",
+    //         element: <Home />,
+    //       },
+    //       {
+    //         path: "/test",
+    //         element: <div> test field</div>,
+    //       },
+    //     ],
+    //   },
+    // ]);
+
+    return (
         <div>
-          <Navbar />
+            <Routes>
+                <Route element={<PublicRoutes />}>
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="" element={<Home />} />
+                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/market-place" element={<MarketPlace />} />
+                    <Route
+                        path="/technical-traning"
+                        element={<TechnicalTraining />}
+                    />
+                    <Route path="/tutorials" element={<Tutorial />} />
+                </Route>
 
-          <Outlet />
+                {/* <Route path="*" element={<ErrorPage />} /> */}
+            </Routes>
         </div>
-      ),
-
-      children: [
-        {
-          path: "",
-          element: <Home />,
-        },
-        {
-          path: "/test",
-          element: <div> test field</div>,
-        },
-      ],
-    },
-  ]);
-
-  return (
-    <div>
-      <RouterProvider router={router}></RouterProvider>
-    </div>
-  );
+    );
 }
 
 export default App;
