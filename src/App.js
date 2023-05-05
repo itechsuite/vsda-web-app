@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import PublicRoutes from "./routes/PublicRoutes";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
-import ErrorPage from "./pages/Error-page";
 import MarketPlace from "./pages/MarketPlace";
 import TechnicalTraining from "./pages/TechnicalTraining";
 import Tutorial from "./pages/Tutorials";
@@ -55,8 +54,6 @@ function App() {
                     />
                     <Route path="/tutorials" element={<Tutorial />} />
                 </Route>
-
-                {/* <Route path="*" element={<ErrorPage />} /> */}
             </Routes>
         </div>
     );
